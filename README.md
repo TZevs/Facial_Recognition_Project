@@ -9,7 +9,7 @@ A real-time facial recognition attendance system built with Python. Using a webc
 
 🚪**Approach:** 
 
-🚦**Status:**
+🚦**Status:** Not Working, the window only remains open for a few seconds before disappearing. 
 
 ### ✨ Features
 - 

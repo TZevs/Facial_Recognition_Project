@@ -1,11 +1,18 @@
+import json
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-# Access to private key for Firebase project
-cred = credentials.Certificate("serviceAccountKey.json")
+# Load Firebase credentials from JSON file
+with open("firebaseKey.json", "r") as f:
+    cred_data = json.load(f)
+
+db_url = cred_data.get("databaseURL")
+
+# --- Firebase ---
+cred = credentials.Certificate(cred_data)
 firebase_admin.initialize_app(cred, {
-    "databaseURL": "https://facerecogattendance-b8673-default-rtdb.europe-west1.firebasedatabase.app/"
+    "databaseURL": db_url
 })
 
 ref = db.reference("Students")

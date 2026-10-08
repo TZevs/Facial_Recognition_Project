@@ -2,24 +2,14 @@
 A facial recognition application that will identify students, as they face the camera, and log them as in attendance without any interference or input from the teacher. 
 
 ---
-## 🎓 About 
+## 🎓 About This Project
 A real-time facial recognition attendance system built with Python. Using a webcam feed, the system detects and identifies students, displays their profile info, and automatically logs their attendance to a Firebase Realtime Database - removing the need for manual registration in classes.
 
-🫟**Problem:** 
+🫟**Problem:** Taking attendance can be time consuming depending on the number of students and when everyone arrives, late comers need to be registered which interrupts the class as the teacher marks them as present.
 
-🚪**Approach:** 
+🚪**Approach:** The face recognition library is used to encode images, which are stored, that are used for comparison against detected faces from the live feed. 
 
-🚦**Status:** Not Working, the window only remains open for a few seconds before disappearing. 
-
-### ✨ Features
-- 
-
-## How It Works
-1. The webcam captures a live video feed and detects faces in each frame using `face_recognition`.
-2. Detected faces are compared against a set of pre-encoded student images stored in `EncodeFile.p`.
-3. Once a face is confirmed across several consecutive frames, the student's data is fetched from Firebase.
-4. Their profile (name, course, year, attendance count) is displayed on-screen, their attendance is updated in the database, and the UI transitions through active -> info -> marked states.
-5. Students already marked in the current session are prevented from being counted twice.
+🚦**Status:** Want to completely change the application, also not completely working as it is.
 
 ---
 ### 🛠️ Tech Stack
@@ -104,8 +94,11 @@ Press `ESC` to exit.
 
 ---
 ## 🔍 Known Issues & Improvements to be Made
-- 
-
+- Camera only recognises 1 face at a time: allow for any and all faces to be detected within the camera window.
+- App window closes after a few seconds: debugging required, I think there is an issue when a face is recognised.
+- When face is detected UI changes to acknowledge: instead have boxes around all faces with a status label like "On Time", "Late", "Not Registered".
+- If this was to be used in a class environment then students need to be organised into classes: allow user to select a class before opening the camera.
+ 
 ---
 ## Credits
 Built following the tutorial: [Face Recognition with Real Time Database | 2 Hour Course | Computer Vision](https://www.youtube.com/watch?v=iBomaK2ARyI) by Murtaza's Workshop.

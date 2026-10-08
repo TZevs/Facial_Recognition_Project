@@ -56,7 +56,7 @@ pip install -r requirements.txt
 - In your Firebase project, enable **Realtime Database**.
 - Download your **service account private key** JSON file and rename it to your `firebaseKey.json`.
 - Place `firebaseKey.json` in the root of the project directory.
-- Update the `databaseURL` in `main.py` to match your Firebase project's database URL.
+- Add the database URL to the `firebaseKey.json`.
 
 #### Add student images 
 Place student photos in `resources/images/`. Each image must follow the naming convention:
